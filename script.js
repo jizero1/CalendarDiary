@@ -101,7 +101,6 @@ const renderCalendar = () => {
                 localStorage.setItem(textID,saveText); 
 
                 const getText = localStorage.getItem(textID); // localStorage에 저장된 텍스트 가져오기
-
                 if (getText || file) {
                     if (savedData === null) {
                         localStorage.setItem(modalCheckID, "📝");
