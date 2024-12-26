@@ -9,7 +9,7 @@
 작성된 메모와 이미지는 localStorage에 저장되어 페이지를 새로고침하거나, 달력 이동시에도 데이터가 유지됩니다.
 
 ## 프로젝트 링크
-[ 달력 일기 페이지 ](https://jizero1.github.io/CalendarDiary/)
+[ 달력 일기 📝 ](https://jizero1.github.io/CalendarDiary/)
 
 ## 개발자
 최지영
