@@ -1,7 +1,7 @@
-## 프로젝트명 [ 달력 일기 ]
+## 프로젝트명 [ 달력 일기 📝 ]
 <div style="display: inline-block" margin-right: 10px;">
-  <img src="images/img2.PNG" width="450" float="left"/>
-  <img src="images/img1.PNG" width="450" />
+  <img src="images/img2.PNG" width="400" float="left"/>
+  <img src="images/img1.PNG" width="400" />
 </div>
 
 ## 프로젝트 설명
@@ -30,7 +30,7 @@
 날짜별로 이미지를 업로드 할 수 있고, 삭제기능을 더해 이미지 삭제도 가능 합니다. 추가된 이미지는 localStorage에 저장됩니다.
 
 ### 5. 날짜에 이모티콘 추가기능
-날짜별로 메모 또는 이미지가 추가되어있을경우, 날짜에 이모티콘이 표시되어 해당 날짜에 무언가 입력되었음을 알려줍니다.
+날짜별로 메모 또는 이미지가 추가되어있을경우, 날짜에 이모티콘(📝)이 표시되어 해당 날짜에 무언가 입력되었음을 알려줍니다.
 모달 안에 메모와 이미지 모두 제거되었을경우, 날짜에 표시된 이모티콘도 제거됩니다.
 
 ### 6. 저장 데이터 유지
