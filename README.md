@@ -1,10 +1,15 @@
-## 프로젝트명 [ 달력 일기 ]
-![달력이미지](images/img1.png)
-![메모,이미지추가](images/img2.png)
+## 프로젝트명 [ 달력 일기 📝 ]
+<div style="display: inline-block" margin-right: 10px;">
+  <img src="images/img2.PNG" width="400" float="left"/>
+  <img src="images/img1.PNG" width="400" />
+</div>
 
 ## 프로젝트 설명
 현재 날짜를 확인하고, 이전달/다음달로 이동 가능한 기존 달력에 메모와 이미지 추가기능을 더한 웹 어플리케이션으로,
 작성된 메모와 이미지는 localStorage에 저장되어 페이지를 새로고침하거나, 달력 이동시에도 데이터가 유지됩니다.
+
+## 프로젝트 링크
+[ 달력 일기 페이지 ]()
 
 ## 개발자
 최지영
