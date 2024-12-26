@@ -1,5 +1,5 @@
 ## 프로젝트명 [ 달력 일기 ]
-![달력이미지](../images/img1.png)
+![달력이미지](https://raw.githubusercontent.com/jizero1/Calendar_Project/main/images/img1.png)
 ![메모,이미지추가](../images/img2.png)
 
 ## 프로젝트 설명
