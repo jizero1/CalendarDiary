@@ -1,7 +1,7 @@
 ## 프로젝트명 [ 달력 일기 ]
 <div style="display: inline-block" margin-right: 10px;">
   <img src="images/img2.PNG" width="450" float="left"/>
-  <img src="images/img1.PNG" width="400" />
+  <img src="images/img1.PNG" width="450" />
 </div>
 
 ## 프로젝트 설명
