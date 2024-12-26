@@ -47,14 +47,13 @@ const renderCalendar = () => {
         const modalCheckID = year + "년" + (month+1) + "월" + dayID; // 날짜별 고유 ID
 
         // 화면을 새로고침하거나, 이전달 또는 다음달로 이동시 renderCalendar()함수가 호출되고,
-        // 달력이 재렌더링되어 날짜별로 표시된 "🎨"이모티콘이 사라지는 문제가 생김. 
+        // 달력이 재렌더링되어 날짜별로 표시된 "📝"이모티콘이 사라지는 문제가 생김. 
         // 이를 해결하기 위해 for문으로 달력의 마지막 날짜까지 돌며, 해당 날짜에 이모티콘 데이터가 있는지 확인후, 
-        // 데이터가 존재한다면 localStorage에 저장된"🎨"이모티콘을 dayElement에 추가함.
-        const savedData = localStorage.getItem(modalCheckID); // modalCheckID에는 각 날짜별로 "🎨" 이모티콘이 저장되어있음
+        // 데이터가 존재한다면 localStorage에 저장된"📝"이모티콘을 dayElement에 추가함.
+        const savedData = localStorage.getItem(modalCheckID); // modalCheckID에는 각 날짜별로 "📝" 이모티콘이 저장되어있음
         if (savedData) {
             dayElement.textContent += savedData;
         };
-
 
 
         // ------------------ 모달 1. 날짜 클릭시 모달띄우기 ------------------ //
@@ -102,13 +101,13 @@ const renderCalendar = () => {
 
                 if (getText || file) {
                     if (savedData === null) {
-                        localStorage.setItem(modalCheckID, "🎨");
-                         dayElement.textContent += "🎨";
+                        localStorage.setItem(modalCheckID, "📝");
+                         dayElement.textContent += "📝";
                     };
                 } else if (!getText && (!getFile || !file)) {
                     alert("이미지 없음");
                     localStorage.removeItem(modalCheckID);
-                    dayElement.textContent = dayElement.textContent.replace("🎨", "");
+                    dayElement.textContent = dayElement.textContent.replace("📝", "");
                 };
 
                 if (!getText) {
