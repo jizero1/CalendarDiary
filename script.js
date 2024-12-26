@@ -13,6 +13,8 @@ const monthNames = ["January", "February", "March", "Aprill", "May",
 // ------------------ 달력 생성 함수 ------------------ //
 const renderCalendar = () => {
 
+    currentDate.textContent = `${monthNames[month]} ${year}`;
+    
     const days = document.querySelectorAll('.calendar_days li'); // 모든 날짜 요소를 가져옴
 
     let lastDateofMonth = new Date(year, month + 1, 0).getDate(), // 현재 월의 마지막 날짜 가져오기
@@ -28,7 +30,7 @@ const renderCalendar = () => {
     };
     // * 달력의 중앙(현재 달의 날짜)부분 (1, 2, 3..)
     for (let i = 1; i <= lastDateofMonth; i++) { // i는 1부터 현재월의 마지막날짜까지 반복
-        let isToday = (i ===  day) && (month === new Date().getMonth()) && (year === new Date().getFullYear()) ? "active" : "";
+        let isToday = (i ===  days) && (month === new Date().getMonth()) && (year === new Date().getFullYear()) ? "active" : "";
         liTag += `<li id="day-${i}" class="${isToday}">${i}</li>`; // 위 세가지 조건이 모두 true 일경우, isToday변수에 active를 할당
     };
     // * 달력의 끝부분 (1, 2, 3...)
@@ -105,15 +107,15 @@ const renderCalendar = () => {
                     if (savedData === null) {
                         localStorage.setItem(modalCheckID, "📝");
                          dayElement.textContent += "📝";
-                    }
+                    };
                 } else if (!getText && (!getFile || !file)) {
                     localStorage.removeItem(modalCheckID);
                     dayElement.textContent = dayElement.textContent.replace("📝", "");
-                }
+                };
 
                 if (!getText) {
                     localStorage.removeItem(textID);
-                }
+                };
 
                 modalCloseID.remove(); // 확인버튼 누르면 모달 닫기
             });
@@ -198,6 +200,9 @@ preNextIcon.forEach(i => {
     i.addEventListener("click", () => {
         // i.id가 prev이냐 아니냐에 따라 month를 -1하거나 +1함.
         month = i.id === "prev" ? month - 1 : month + 1;
+        console.log("클릭함");
+        console.log(month);
+        console.log(i.id);
         // 12월 이상이 되었을때 undifinded가 뜨는 오류를 해결하기 위해,
         // 0 이하이거나 11 이상이되면 date, year, month를 새로 추출.
         if (month < 0 || month > 11) {
