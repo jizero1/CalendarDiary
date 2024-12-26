@@ -3,6 +3,7 @@
 
 html {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 * {
     margin: 0;
@@ -208,6 +209,6 @@ header span:hover {
 }
 @media screen and (max-width:576px) {
     .wrapper {
-        width: 450px;
+        width: 350px;
     }
 }
