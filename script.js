@@ -82,8 +82,11 @@ const renderCalendar = () => {
                 </div>
             </div>`;
 
-            document.querySelector("#modal-container").insertAdjacentHTML('beforeend',modalHTML); // 부모요소 끝에 modalHTML을 삽입
-
+            // + 모달 중복생성 방지를 위해 기존 모달이 있을경우, 새모달을 생성하지 않게함.
+            if (!document.querySelector(`#${modalID}`)) {
+                document.querySelector("#modal-container").insertAdjacentHTML('beforeend',modalHTML); // 부모요소 끝에 modalHTML을 삽입
+            }
+            
 
 
 
@@ -103,16 +106,15 @@ const renderCalendar = () => {
                     if (savedData === null) {
                         localStorage.setItem(modalCheckID, "📝");
                          dayElement.textContent += "📝";
-                    };
+                    }
                 } else if (!getText && (!getFile || !file)) {
-                    alert("이미지 없음");
                     localStorage.removeItem(modalCheckID);
                     dayElement.textContent = dayElement.textContent.replace("📝", "");
-                };
+                }
 
                 if (!getText) {
                     localStorage.removeItem(textID);
-                };
+                }
 
                 modalCloseID.remove(); // 확인버튼 누르면 모달 닫기
             });
