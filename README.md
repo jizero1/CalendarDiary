@@ -1,9 +1,9 @@
 ## 프로젝트명 [ 달력 일기 ]
 <!-- 첫 번째 이미지 (메모, 이미지 추가) 크기 변경 -->
-<img src="images/img2.PNG" width="500" />
+<img src="images/img2.PNG" width="300" float="left"/>
 
 <!-- 두 번째 이미지 (달력 이미지) 크기 변경 -->
-<img src="images/img1.PNG" width="500" />
+<img src="images/img1.PNG" width="300" />
 
 ## 프로젝트 설명
 현재 날짜를 확인하고, 이전달/다음달로 이동 가능한 기존 달력에 메모와 이미지 추가기능을 더한 웹 어플리케이션으로,
