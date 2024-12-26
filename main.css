@@ -196,6 +196,15 @@ header span:hover {
         width: 400px;
         height: 550px;
     }
+    .wrapper header {
+        padding: 25px 50px 10px;
+    }
+    .img {
+        width: 300px;
+        height: 250px;
+        top: 70px;
+        left: 50px;
+    }
 }
 @media screen and (max-width:576px) {
     .wrapper {
