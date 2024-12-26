@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+html {
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(238, 249, 241);
+}
+.wrapper {
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+}
+.wrapper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 100px 10px;
+}
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+header span {
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin: 0 1px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    padding-top: 7px;
+}
+header span:last-child {
+    margin-right: -10px;
+}
+header span:hover {
+    background: rgba(186, 219, 195, 0.4);
+}
+.calendar {
+    padding: 20px;
+}
+.calendar ul {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.calendar .calendar_weeks li {
+    font-weight: 500;
+}
+.calendar .calendar_days {
+    margin-bottom: 20px;
+}
+.calendar .calendar_days li {
+    cursor: pointer;
+    margin: 30px 0px 35px 0px;
+}
+.calendar_days li.inactive {
+    color: rgb(197, 196, 196);
+}
+.calendar_days li.active {
+    color: white;
+}
+.calendar ul li {
+    z-index: 1;
+    position: relative;
+    width: calc(100%/7);
+}
+.calendar .calendar_days li::before {
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: 60px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 날짜에 마우스 올라갈시 */
+.calendar_days li:hover::before {
+    background: rgba(186, 219, 195, 0.4);
+}
+/* 현재 날짜 표시 */
+.calendar_days .active::before {
+    background: rgb(141, 160, 141);
+}
+#modal-container .modal {
+    width: 500px;
+    height: 620px;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙으로 이동 */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(224, 234, 222);
+    border-radius: 10px;
+}
+#modal-container .modal-x {
+    position: absolute;
+    right: 10px;
+    margin: 3px 3px 0px 0px;
+    padding: 2px 5px 2px 5px;
+    border-style: none;
+    background: transparent; /* 배경 없애기 */
+    font-size: 15px;
+    cursor: pointer;
+    color:rgb(141, 160, 141);
+}
+#modal-container .modal-h2 {
+    position: relative;
+    padding: 10px 0px 20px 0px;
+}
+.img {
+    width: 300px;
+    height: 300px;
+    padding: 0px 0px 0px 0px;
+    display: none;
+    border: 4px solid white;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 100px;
+}
+#modal-container .fileLabel {
+    width: 300px;
+    height: 300px;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: rgb(222, 222, 222);  
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#modal-container #textArea {
+    width: 90%;
+    height: 150px;
+    padding: 15px;
+    font-size: 15px;
+    font-family: "Roboto Mono", monospace;
+    border-style: none;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* 클릭시 부드럽게 */
+    resize: none; /* 사용자가 크기조정 못하도록 비활성화 */
+    margin-top: 20px;
+}
+#modal-container #textArea:focus {
+    box-shadow: 0 0 10px rgba(112, 160, 125, 0.5); /* 테두리 주변에 그림자 추가 */
+    outline: none; /* 기본 아웃라인 제거 */
+}
+/* 이미지삭제버튼(#img-remove)와 저장버튼(.modal-close)의 css */
+.btnStyle {
+    border-style: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 12px 10px 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: rgb(141, 160, 141);
+    color: white;
+    font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 600px;
+    }
+    .calendar .calendar_days li::before {
+        height: 50px;
+        width: 50px;
+    }
+    #modal-container .modal {
+        width: 400px;
+        height: 550px;
+    }
+}
+@media screen and (max-width:576px) {
+    .wrapper {
+        width: 450px;
+    }
+}
