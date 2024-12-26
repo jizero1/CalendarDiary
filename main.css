@@ -90,26 +90,18 @@ header span:hover {
     z-index: -1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    
 }
 /* 날짜에 마우스 올라갈시 */
 .calendar_days li:hover::before {
     background: rgba(186, 219, 195, 0.4);
 }
-.hover {
-    font-weight: bold;
-    color: white;
-    transform: scale(1.4);
-    transition: transform 0.3s ease;
-}
-/* 날짜를 선택시 */
+/* 현재 날짜 표시 */
 .calendar_days .active::before {
     background: rgb(141, 160, 141);
 }
 #modal-container .modal {
     width: 500px;
     height: 620px;
-    /* max-height: 90%; */
     position: fixed;
     z-index: 999;
     top: 50%;
@@ -118,14 +110,11 @@ header span:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: flex-start; 수평 중앙 정렬 */
     padding: 10px;
     background-color: rgb(224, 234, 222);
     border-radius: 10px;
-    /* overflow-y: auto; */
 }
 #modal-container .modal-x {
-    /* align-items: left; */
     position: absolute;
     right: 10px;
     margin: 3px 3px 0px 0px;
@@ -135,30 +124,20 @@ header span:hover {
     font-size: 15px;
     cursor: pointer;
     color:rgb(141, 160, 141);
-    
-    /* background-color: green; */
-    /* border-radius: 3px; */
 }
 #modal-container .modal-h2 {
-    /* text-align: center; */
     position: relative;
     padding: 10px 0px 20px 0px;
 }
 .img {
     width: 300px;
-    /* max-width: 40%; */
     height: 300px;
-    /* width: 100%; */
-    /* max-height: 90%; */
     padding: 0px 0px 0px 0px;
     display: none;
     border: 4px solid white;
     border-radius: 10px;
     display: none;
     position: absolute;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     top: 70px;
     left: 100px;
 }
@@ -205,13 +184,17 @@ header span:hover {
     color: white;
     font-size: 15px;
 }
-/* .listStyle::after {
-    content:"🎨";
-    display: block; 
-} */
 @media screen and (max-width: 768px) {
     .wrapper {
         width: 600px;
+    }
+    .calendar .calendar_days li::before {
+        height: 50px;
+        width: 50px;
+    }
+    #modal-container .modal {
+        width: 400px;
+        height: 550px;
     }
 }
 @media screen and (max-width:576px) {
