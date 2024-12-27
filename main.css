@@ -208,6 +208,9 @@ header span:hover {
 }
 @media screen and (max-width:576px) {
     .wrapper {
-        width: 250px;
+        width: 350px;
+    }
+    .wrapper header {
+        padding: 25px 20px 10px;
     }
 }
