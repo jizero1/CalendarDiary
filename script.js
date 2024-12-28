@@ -12,10 +12,8 @@ const monthNames = ["January", "February", "March", "Aprill", "May",
 
 // ------------------ 달력 생성 함수 ------------------ //
 const renderCalendar = () => {
-
-    currentDate.textContent = `${monthNames[month]} ${year}`;
     
-    const days = document.querySelectorAll('.calendar_days li'); // 모든 날짜 요소를 가져옴
+    currentDate.textContent = `${monthNames[month]} ${year}`;
 
     let lastDateofMonth = new Date(year, month + 1, 0).getDate(), // 현재 월의 마지막 날짜 가져오기
         lastDateofLastMonth = new Date(year, month, 0).getDate(), // 현재 월이 아닌, 전 월의 마지막 날짜가져오기
@@ -30,7 +28,7 @@ const renderCalendar = () => {
     };
     // * 달력의 중앙(현재 달의 날짜)부분 (1, 2, 3..)
     for (let i = 1; i <= lastDateofMonth; i++) { // i는 1부터 현재월의 마지막날짜까지 반복
-        let isToday = (i ===  days) && (month === new Date().getMonth()) && (year === new Date().getFullYear()) ? "active" : "";
+        let isToday = (i ===  day) && (month === new Date().getMonth()) && (year === new Date().getFullYear()) ? "active" : "";
         liTag += `<li id="day-${i}" class="${isToday}">${i}</li>`; // 위 세가지 조건이 모두 true 일경우, isToday변수에 active를 할당
     };
     // * 달력의 끝부분 (1, 2, 3...)
