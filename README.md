@@ -39,7 +39,7 @@
 ### 6. 저장 데이터 유지
 메모와 이미지, 날짜별 이모티콘은 localStorage에 저장되어 페이지를 새로고침하거나 달력 이동시에도 데이터가 유지됩니다.
 
-### 7. 기술 스택
+## 기술 스택
 HTML / CSS / JavaScript / localStorage
 * JavaScript : 달력 생성 및 기능구현
 * localStorage : 메모, 이미지, 이모티콘 데이터 저장
